@@ -18,16 +18,19 @@ make clean
 ## To compare the time usage for precomputation: modify the line 620-630 in bhepv.cpp.
 ```
 
+## File Folders:
+
+1. Folder [Maps](https://github.com/yang-mingzhou/MBOR/tree/master/Maps): Maps data
+2. Folder [Queries](https://github.com/yang-mingzhou/MBOR/tree/master/Queries): Queries generated for each map
+3. Folder [src](https://github.com/yang-mingzhou/MBOR/tree/master/src): Source code
+
 ## Files:
-0. [Makefile](https://github.com/yang-mingzhou/MBOR/blob/master/src/Makefile): Makefile for the both HBOR and HBOR-B
-1. [bhepvWorkflow.sh](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepvWorkflow.sh): Workflow script for HBOR
-2. [b3hepvWorkflow.sh](https://github.com/yang-mingzhou/MBOR/blob/master/src/b3hepvWorkflow.sh): Workflow script for HBOR-B
+0. [Makefile](https://github.com/yang-mingzhou/MBOR/blob/master/src/Makefile): Makefile for MBOR
 3. [bhepv.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepv.cpp): 
 4. [bhepvPathRetrieval.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepvPathRetrieval.cpp):  
 5. [bhepvPrecomputation.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepvPrecomputation.cpp):  
 6. [biobjectiveGraph.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/biobjectiveGraph.cpp):  
 7. [biobjectiveGraph.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/biobjectiveGraph.h):  
-8. [dfs_class_v2.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/dfs_class_v2.h): DFS specifying only source node
 9. [fragmentPathRetrieval.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/fragmentPathRetrieval.cpp):  
 10. [hbor.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/hbor.cpp):  
 11. [hbor.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/hbor.h):  
@@ -38,40 +41,6 @@ make clean
 18. [pairs.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/pairs.cpp): Generating queries; we use 12 as a random seed in the project.
 19. [precomputation.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/precomputation.cpp):  
 
-### Test cases:
-
-20. [test.cpp](https://github.com/yang-mingzhou/biobjectiveRouting/blob/main/src/test.cpp):  
-
-### Following files are built upon code repository [BOAstar](https://github.com/jorgebaier/BOAstar/)   after fixing some memory leak issues:
-
-21. [boastar.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/boastar.c):  
-22. [boastar.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/boastar.h):  
-23. [bod.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/bod.c):  
-24. [bod.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/bod.h):  
-25. [bodPathRetrieval.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/bodPathRetrieval.c):  
-26. [bodPathRetrieval.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/bodPathRetrieval.h):  
-27. [pathRetrieval.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/pathRetrieval.c):  
-28. [pathRetrieval.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/pathRetrieval.h):  
-29. [main_boa.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/main_boa.c):  
-30. [main_bod.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/main_bod.c):  
-31. [include.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/include.h):  
-32. [node_namoa.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/node_namoa.h):  
-33. [main_namoadr.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/main_namoadr.c):  
-34. [namoadr.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/namoadr.c):  
-35. [namoadr.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/namoadr.h):  
-36. [node.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/node.h):  
-37. [heap.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/heap.c):  
-38. [heap.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/heap.h):  
-39. [graph.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/graph.c):  
-40. [graph.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/graph.h):  
-41. [graph_data.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/graph_data.h):  
-
-
-## File Folders:
-
-1. Folder [Maps](https://github.com/yang-mingzhou/MBOR/tree/master/Maps)
-2. Folder [Queries](https://github.com/yang-mingzhou/MBOR/tree/master/Queries)
-3. Folder [src](https://github.com/yang-mingzhou/MBOR/tree/master/src)
 
 ## Acknowledgements
 

@@ -1,6 +1,6 @@
 # Towards Pareto-optimality with Multi-level Bi-objective Routing: A Summary of Results #
 
-## [Requirements](https://github.com/yang-mingzhou/biobjectiveRouting):
+## Requirements:
 ```
 GCC 11
 C99
@@ -32,6 +32,8 @@ make clean
 5. [hborWithBhepv.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/hborWithBhepv.cpp): Implementation of MBOR-Basic and MBOR-Adv
 6. [kahip.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/kahip.cpp): Graph partation using [KaHIP](https://github.com/KaHIP/KaHIP) 
 7. [pairs.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/pairs.cpp): Generating queries; we use 12 as a random seed in the project.
+7. [boastar.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/boastar.c): Baseline method: BOA*.
+7. [namoadr.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/namoadr.c): Baseline method: NAMOA*dr.
 
 ## Acknowledgements
 
@@ -41,8 +43,7 @@ This repository builds upon the following papers and code repositories:
 [Simple and efficient bi-objective search algo-
 rithms via fast dominance checks](https://www.sciencedirect.com/science/article/pii/S0004370222001473)  
 Carlos Hernández, William Yeoh, Jorge A Baier, Han Zhang, Luis Suazo, Sven
-Koenig, and Oren Salzman. 2023. Simple and efficient bi-objective search algo-
-rithms via fast dominance checks. Artificial Intelligence 314 (2023), 103807
+Koenig, and Oren Salzman. 2023. Simple and efficient bi-objective search algorithms via fast dominance checks. Artificial Intelligence 314 (2023), 103807
 
 [Think Locally, Act Globally: Highly
 Balanced Graph Partitioning](https://link.springer.com/chapter/10.1007/978-3-642-38527-8_16)  

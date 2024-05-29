@@ -15,32 +15,23 @@ make run_HBOR MAP=test NPARTITIONS=2
 ## clean object files
 make clean
 
-## To compare the time usage for precomputation: modify the line 620-630 in bhepv.cpp.
+## To compare the time usage for precomputation between MBOR-Adv and MBOR-Basic: modify the line 620-630 in bhepv.cpp.
 ```
 
 ## File Folders:
 
-1. Folder [Maps](https://github.com/yang-mingzhou/MBOR/tree/master/Maps): Maps data
+1. Folder [Maps](https://github.com/yang-mingzhou/MBOR/tree/master/Maps): Map data
 2. Folder [Queries](https://github.com/yang-mingzhou/MBOR/tree/master/Queries): Queries generated for each map
 3. Folder [src](https://github.com/yang-mingzhou/MBOR/tree/master/src): Source code
 
 ## Files:
-0. [Makefile](https://github.com/yang-mingzhou/MBOR/blob/master/src/Makefile): Makefile for MBOR
-3. [bhepv.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepv.cpp): 
-4. [bhepvPathRetrieval.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepvPathRetrieval.cpp):  
-5. [bhepvPrecomputation.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepvPrecomputation.cpp):  
-6. [biobjectiveGraph.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/biobjectiveGraph.cpp):  
-7. [biobjectiveGraph.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/biobjectiveGraph.h):  
-9. [fragmentPathRetrieval.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/fragmentPathRetrieval.cpp):  
-10. [hbor.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/hbor.cpp):  
-11. [hbor.h](https://github.com/yang-mingzhou/MBOR/blob/master/src/hbor.h):  
-12. [hborWithBhepv.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/hborWithBhepv.cpp):  
-13. [hborWithBhepv.hpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/hborWithBhepv.hpp):  
-15. [kahip.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/kahip.cpp):  
-17. [onlineRouting.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/onlineRouting.cpp):  
-18. [pairs.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/pairs.cpp): Generating queries; we use 12 as a random seed in the project.
-19. [precomputation.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/precomputation.cpp):  
-
+1. [Makefile](https://github.com/yang-mingzhou/MBOR/blob/master/src/Makefile): Makefile for MBOR
+2. [bhepvPathRetrieval.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepvPathRetrieval.cpp): Main function to run queries   
+3. [bhepv.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepv.cpp): Definition of the Multi-level Encoded Pareto Frontier View (MEPFV) 
+4. [bhepvPrecomputation.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepvPrecomputation.cpp): Precompute MEPFV
+5. [hborWithBhepv.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/hborWithBhepv.cpp): Implementation of MBOR-Basic and MBOR-Adv
+6. [kahip.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/kahip.cpp): Graph partation using [KaHIP](https://github.com/KaHIP/KaHIP) 
+7. [pairs.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/pairs.cpp): Generating queries; we use 12 as a random seed in the project.
 
 ## Acknowledgements
 

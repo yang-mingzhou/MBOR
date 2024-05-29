@@ -1,0 +1,8 @@
+.vscode/*
+*.sbatch
+output
+src/*.o
+*.swp
+*/.ipynb_checkpoints/*
+bhepv/
+.ipynb_checkpoints/

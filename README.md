@@ -9,8 +9,8 @@ C99
 ```
 cd src
 
-## HBOR for the "test" network with 2 partitions
-make run_HBOR MAP=test NPARTITIONS=2
+## MBOR for the "test" network with 3 partitions (i.e., the toy example in the paper)
+make run_MBOR MAP=test NPARTITIONS=3
 
 ## clean object files
 make clean
@@ -40,8 +40,7 @@ make clean
 This repository builds upon the following papers and code repositories:
 
 ### Paper
-[Simple and efficient bi-objective search algo-
-rithms via fast dominance checks](https://www.sciencedirect.com/science/article/pii/S0004370222001473)  
+[Simple and efficient bi-objective search algorithms via fast dominance checks](https://www.sciencedirect.com/science/article/pii/S0004370222001473)  
 Carlos Hernández, William Yeoh, Jorge A Baier, Han Zhang, Luis Suazo, Sven
 Koenig, and Oren Salzman. 2023. Simple and efficient bi-objective search algorithms via fast dominance checks. Artificial Intelligence 314 (2023), 103807
 
@@ -66,7 +65,7 @@ Description: The graph partitioning framework KaHIP -- Karlsruhe High Quality Pa
 #### Entry 1
 - **Issue Description**: Application throws a 'Segmentation Fault' upon execution.
 - **Steps to Reproduce**:
-  1. Execute the application with command `./bhepvPathRetrieval.o test 3`.
+  1. Execute the application with command `make run_MBOR MAP=test NPARTITIONS=3`.
   2. Observe the segmentation fault.
 - **Tried Solutions**: Checked for memory leaks and stack size; Check ulimit settins of the system using 'ulimit -a'.
 - **Solution Description**: Increased the stack size on the Linux server by executing `ulimit -s unlimited`. This resolved the stack overflow caused by deep recursion within the application.

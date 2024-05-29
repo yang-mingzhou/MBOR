@@ -31,9 +31,9 @@ make clean
 4. [bhepvPrecomputation.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/bhepvPrecomputation.cpp), [MultiGraphBOD.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/MultiGraphBOD.cpp): Precompute MEPFV
 5. [hborWithBhepv.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/hborWithBhepv.cpp): Implementation of MBOR-Basic and MBOR-Adv
 6. [kahip.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/kahip.cpp): Graph partation using [KaHIP](https://github.com/KaHIP/KaHIP) 
-7. [pairs.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/pairs.cpp): Generating queries; we use 12 as a random seed in the project.
-7. [boastar.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/boastar.c): Baseline method: BOA*.
-7. [namoadr.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/namoadr.c): Baseline method: NAMOA*dr.
+7. [pairs.cpp](https://github.com/yang-mingzhou/MBOR/blob/master/src/pairs.cpp): Generating queries; we use 12 as a random seed in the project
+7. [boastar.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/boastar.c): Baseline method: BOA*
+7. [namoadr.c](https://github.com/yang-mingzhou/MBOR/blob/master/src/namoadr.c): Baseline method: NAMOA*dr
 
 ## Acknowledgements
 

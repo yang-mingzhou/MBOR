@@ -171,29 +171,6 @@ void HBORBasic::readOriginGraph(){
 
 
 
-
-// vector<BiobjectivePath> HBORBasic::boaPathRetrievalWithInFragment(int snode, int dnode, int fragmentId) {
-//     vector<BiobjectivePath> pathCostSet;
-//     int snodeInFragment = snode;
-//     int dnodeInFragment = dnode;
-//     if (fragmentId!=-1){ //using fragment graphs
-//         snodeInFragment = fragmentIndex[snode-1][1];
-//         dnodeInFragment = fragmentIndex[dnode-1][1];
-//     }
-//     // cout<< "snodeInFragment: "<<snodeInFragment<<dnodeInFragment<<endl;
-//     const GraphData currentGraph = graphDataVector[fragmentId+1];
-//     const GraphData* graphDataPtr = &currentGraph;
-//     unsigned (*solutions)[2] = paretoPathsInFragment(snodeInFragment, dnodeInFragment, graphDataPtr);
-//     int i = 0;
-//     while (solutions[i][0] > 0) {
-//         BiobjectivePath currentSol(solutions[i][0], solutions[i][1]);
-//         pathCostSet.push_back(currentSol);
-//         i++;
-//     } 
-//     cout<<pathCostSet.size()<<endl;
-//     return pathCostSet;
-// }
-
 vector<BiobjectivePath> HBORBasic::namorPathRetrievalWithInFragment(int snode, int dnode, int fragmentId) {
     vector<BiobjectivePath> pathCostSet;
     int snodeInFragment = snode;
@@ -261,32 +238,6 @@ std::vector<BiobjectivePath> HBORBasic::generateCombinations(
     
     return result;
 }
-
-// vector<BiobjectivePath> HBORBasic::dominanceCheck(vector<BiobjectivePath> superParetoCostSet){
-// //     cout<< "superParetoCostSet size: " << superParetoCostSet.size() << endl;
-//     vector<BiobjectivePath> nonDominatedSolutions;
-//     BiobjectivePath currentSol, comparedSol;
-//     vector<int> paretoIndex(superParetoCostSet.size(), 1);
-//     for (size_t i = 0; i < superParetoCostSet.size(); ++i) {
-//         if (paretoIndex[i]==1){
-//             currentSol = superParetoCostSet[i];
-//             for (size_t j = i+1; j < superParetoCostSet.size(); ++j){
-//                 comparedSol = superParetoCostSet[j];
-//                 if (currentSol.isDominatedBy(comparedSol)){
-//                     paretoIndex[i]=0;
-//                 }
-//                 if (comparedSol.isDominatedBy(currentSol)|| currentSol.eq(comparedSol)){ // remove duplication
-//                     paretoIndex[j]=0;
-//                 }
-
-//             }   
-//             if (paretoIndex[i]==1){
-//             nonDominatedSolutions.push_back(currentSol);
-//             }
-//         }
-//     }
-//     return nonDominatedSolutions;
-// }
 
 vector<BiobjectivePath> HBORBasic::dominanceCheck(vector<BiobjectivePath> superParetoCostSet){
     vector<BiobjectivePath> nonDominatedSolutions;
@@ -379,59 +330,6 @@ void HBORBasic::load(){
 
 
 
-
-// int HBORBasic::hbor(int snode, int dnode){
-//     cout<< "snodednode" << snode << dnode <<endl;
-//     vector<BiobjectivePath> solutionSet;
-//     int sBN, dBN;
-    
-//     int sfragment = fragmentIndex[snode-1][0];
-//     int dfragment = fragmentIndex[dnode-1][0];
-    
-//     cout<< "sfragment: " << sfragment << " ,dfragment "<< dfragment<<endl;
-    
-//     vector<int> sBoundaryNode = boundaryNodeSet[sfragment];
-//     vector<int> dBoundaryNode = boundaryNodeSet[dfragment];
-    
-//     if (sfragment==dfragment){
-//         vector<BiobjectivePath> infragmentCostSet = boaPathRetrievalWithInFragment(snode, dnode, sfragment);
-//         solutionSet.insert(solutionSet.end(), infragmentCostSet.begin(), infragmentCostSet.end());
-//     }
-    
-//     for (size_t i = 0; i < sBoundaryNode.size(); ++i) {
-        
-//         sBN = sBoundaryNode[i];
-//         for (size_t j = 0; j < dBoundaryNode.size(); ++j){
-//             dBN = dBoundaryNode[j];
-// //             cout<< "sBN" << sBN << dBN <<endl;
-//             vector<BiobjectivePath> onePairBoundaryPathSet = onePairBoundaryPathOf(snode, dnode, sBN, dBN); 
-//             solutionSet.insert(solutionSet.end(), onePairBoundaryPathSet.begin(), onePairBoundaryPathSet.end());
-            
-//         }
-//     }
-
-    
-//     cout<< "boundary path size: " <<solutionSet.size() <<endl;
-    
-//     vector<BiobjectivePath> paretoSet = dominanceCheck(solutionSet);
-// //     for (size_t j = 0; j < paretoSet.size(); ++j){
-// //         cout<< "result: " << paretoSet[j].cost1 <<", " <<paretoSet[j].cost2 <<endl;
-// //     }
-
-//     return paretoSet.size();
-    
-// }
-
-// int HBORBasic::boa(int snode, int dnode){
-//     cout<< "snodednode" << snode << dnode <<endl;
-//     vector<BiobjectivePath> solutionSet = boaPathRetrievalWithInFragment(snode, dnode, -1);
-// //     for (size_t j = 0; j < solutionSet.size(); ++j){
-// //         cout<< "result: " << solutionSet[j].cost1 <<", " <<solutionSet[j].cost2 <<endl;
-// //     }
-
-//     return solutionSet.size();
-    
-// }
 
 int HBORBasic::namor(int snode, int dnode){
     cout<< "snodednode" << snode << dnode <<endl;

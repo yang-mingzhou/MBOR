@@ -24,52 +24,6 @@ void BHEPV::addEdge(int start, int end, int cost1, int cost2) {
 
 
 
-// void BHEPV::readOriginGraphDataFromFile(GraphData* graphData) {
-//     string filename = "../Maps/"+mapName+"-road-d.txt";
-//     std::ifstream file(filename);
-//     if (!file) {
-//         std::cerr << "Error opening file: " << filename << std::endl;
-//         return;
-//     }
-
-//     // Read num_nodes and num_arcs
-//     file >> graphData->numOfGnode >> graphData->numOfArcs;
-    
-//     numVertices = graphData->numOfGnode;
-//     adjacencyList.resize(numVertices);
-//     partitions.resize(numVertices);
-
-
-//     // Allocate memory for edgeVectors
-//     graphData->edgeVectors = new int*[graphData->numOfArcs];
-//     for (int i = 0; i < graphData->numOfArcs; i++) {
-//         graphData->edgeVectors[i] = new int[4];
-//     }
-
-//     // Read data into edgeVectors
-//     for (int i = 0; i < graphData->numOfArcs; i++) {
-//         for (int j = 0; j < 4; j++) {
-//             file >> graphData->edgeVectors[i][j];
-//         }
-//         addEdge(graphData->edgeVectors[i][0], graphData->edgeVectors[i][1], graphData->edgeVectors[i][2], graphData->edgeVectors[i][3]);
-//     }
-//     file.close();
-// }
-
-
-
-
-// void BHEPV::readOriginGraph(){
-//     GraphData graphData;
-//     int num_nodes = 0;
-//     int num_arcs = 0;
-//     // Initialize graphData
-//     bod_initializeGraphData(&graphData, num_nodes, num_arcs);
-//     // Read data from file and assign it to graphData
-//     readOriginGraphDataFromFile(&graphData);
-//     graphDataVector.push_back(graphData);
-// }
-
 void BHEPV::readOriginGraph(){
     GraphData graphData;
     int num_nodes = 0;
@@ -663,12 +617,6 @@ void BHEPV::PrecomputationAndSave(){
 }
 
 
-// void BHEPV::load(){
-//     readOriginGraph();
-//     loadBoundaryNodes();
-//     loadEncodedPathView();
-//     loadFragmentIndex();
-// }
 
 
 void BHEPV::freeGraphDataVector(){

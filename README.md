@@ -9,6 +9,8 @@ C99
 ```
 cd src
 
+## module load gcc/11.3.0
+
 ## MBOR for the "test" network with 3 partitions (i.e., the toy example in the paper)
 make run_MBOR MAP=test NPARTITIONS=3
 
